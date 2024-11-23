@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Productos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Editar Producto</h2>
+      <form id="editForm">
+        <input type="hidden" id="editId" />
+        <input type="text" id="editName" placeholder="Nombre" required />
+        <input
+          type="text"
+          id="editDescription"
+          placeholder="Descripción"
+          required
+        />
+        <input
+          type="number"
+          id="editPrice"
+          placeholder="Precio"
+          step="0.01"
+          required
+        />
+        <input type="number" id="editStock" placeholder="Stock" required />
+        <button type="submit">Actualizar Producto</button>
+      </form>
+    </div>
+  </div>
+  <body>
+    <div class="container">
+      <h1>Catálogo de Productos</h1>
+
+      <div class="form-section">
+        <h2>Agregar Producto</h2>
+        <form id="productForm">
+          <input type="text" id="name" placeholder="Nombre" required />
+          <input
+            type="text"
+            id="description"
+            placeholder="Descripción"
+            required
+          />
+          <input
+            type="number"
+            id="price"
+            placeholder="Precio"
+            step="0.01"
+            required
+          />
+          <input type="number" id="stock" placeholder="Stock" required />
+          <button type="submit">Agregar Producto</button>
+        </form>
+      </div>
+
+      <div class="search-section">
+        <h2>Buscar Producto</h2>
+        /
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Buscar por nombre..."
+        />
+      </div>
+
+      <div class="products-section">
+        <h2>Lista de Productos</h2>
+        <table id="productsTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+              <th>Stock</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="productsTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
